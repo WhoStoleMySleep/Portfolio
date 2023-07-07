@@ -1,4 +1,6 @@
+import Header from './components/Header/Header';
 import './globals.css'
+import '@/assets/font/font.css'
 
 export const metadata = {
   title: 'WhoStoleMySleep',
@@ -13,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
+        <Header />
         {children}
       </body>
     </html>

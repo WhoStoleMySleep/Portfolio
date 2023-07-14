@@ -20,6 +20,8 @@ export default function RootLayout({
         <Header />
         <div className="wrapper">
           {children}
+        </div>
+        <Footer />
       </body>
     </html>
   )

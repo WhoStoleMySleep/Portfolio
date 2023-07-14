@@ -1,6 +1,7 @@
 import Header from './components/Header/Header';
-import './globals.css'
-import '@/assets/font/font.css'
+import './variables.scss';
+import './globals.scss'
+import '@/assets/font/font.scss'
 
 export const metadata = {
   title: 'WhoStoleMySleep',

@@ -1,4 +1,5 @@
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import './variables.scss';
 import './globals.scss'
 import '@/assets/font/font.scss'
@@ -17,7 +18,8 @@ export default function RootLayout({
     <html lang="ru">
       <body>
         <Header />
-        {children}
+        <div className="wrapper">
+          {children}
       </body>
     </html>
   )

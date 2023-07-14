@@ -1,0 +1,11 @@
+.footer {
+	max-width: var(--header-footer-width);
+	height: 64px;
+	margin: 0 auto;
+
+	&__copyright {
+		text-align: center;
+		font-size: 80%;
+		line-height: 64px;
+	}
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image'
-import Face from '@/assets/image/face.png'
+import Face from '@/assets/image/face.webp'
 import Link from 'next/link';
 import styles from './Header.module.scss';
 
@@ -13,6 +13,7 @@ function Header() {
             src={Face} 
             alt='Me'
             className={styles["header__logo-image"]}
+            loading='lazy'
           />
           <p className={styles["header__logo-text"]}>
             WhoStoleMySleep
@@ -26,11 +27,6 @@ function Header() {
             </li>
             <li className={styles["header__navigation-element"]}>
               <Link href='' className={styles.header__lightmode}></Link>
-            </li>
-            <li className={styles["header__navigation-element"]}>
-              <span className="header__search">
-                <Link href='' className={styles.header__search}></Link>
-              </span>
             </li>
           </ul>
         </nav>

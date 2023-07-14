@@ -1,10 +1,14 @@
 .header {
   height: 54px;
-  width: 100%;
+  width: var(--max-size);
+  position: fixed;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(8px);
+  box-shadow: inset 0 -1px 0 0 rgba(0,0,0,.1);
 
   &__wrapper {
-    max-width: 1100px;
-    height: 100%;
+    max-width: var(--header-footer-width);
+    height: var(--max-size);
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -14,6 +18,16 @@
   &__logo,
   &__navigation-list {
     display: flex;
+  }
+
+  &__logo {
+    border-radius: 3px;
+    transition-duration: 300ms;
+    padding: 4px 6px;
+    
+    &:hover {
+      background: var(--bg-color);
+    }
   }
 
   &__logo-image {
@@ -37,19 +51,17 @@
     line-height: 14px;
 
     &:hover {
-      background: #474c50;
+      background: var(--bg-color);
     }
   }
 
-  &__lightmode,
-  &__search {
+  &__lightmode {
     font-family: FontAwesome;
     font-weight: bold;
   }
 
   &__contact-link,
-  &__lightmode,
-  &__search {
+  &__lightmode {
     display: block;
     padding: 12px;
   }

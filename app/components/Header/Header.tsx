@@ -23,7 +23,7 @@ function Header() {
         <nav className={styles.header__navigation}>
           <ul className={styles["header__navigation-list"]}>
             <li className={styles["header__navigation-element"]}>
-              <Link href='' className={styles["header__contact-link"]}>Contact</Link>
+              <Link href='/contact' className={styles["header__contact-link"]}>Contact</Link>
             </li>
             <li className={styles["header__navigation-element"]}>
               <Link href='' className={styles.header__lightmode}></Link>

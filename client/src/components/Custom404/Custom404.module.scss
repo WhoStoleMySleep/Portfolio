@@ -1,0 +1,29 @@
+.cube {
+  transform: rotateX(45deg) rotateZ(45deg);
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  color: #000;
+  margin: 0 auto;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100px;
+    height: 20px;
+    background: yellow;
+    position: absolute;
+    display: block;
+    margin: calc(100% - 20px) 0 0 0;
+  }
+
+  &::before {
+    content: '';
+    height: 100px;
+    width: 20px;
+    background: yellow;
+    position: absolute;
+    display: block;
+    margin: 0 0 0 calc(100% - 20px);
+  }
+}

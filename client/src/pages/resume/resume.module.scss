@@ -1,0 +1,160 @@
+.resume {
+  max-width: 720px;
+  margin: 0 auto;
+  margin-top: 48px;
+  padding-left: calc(min(16px, 8vw));
+  padding-right: calc(min(16px, 8vw));
+  
+  &__title {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+
+  &__file-link {
+    display: flex;
+    height: 33px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  &__icon {
+    width: 11.33px;
+    height: 17.63px;
+    object-fit: cover;
+    margin-right: 2px;
+    filter: invert(1);
+  }
+
+  article {
+    border-bottom: 1px solid white;
+  }
+
+  &__contacts {
+    height: 89px;
+    padding-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: hsla(195,2%,60%,.95);
+    margin-bottom: 28px;
+  }
+
+  &__number,
+  &__email,
+  &__site,
+  &__about-me-text,
+  &__company-and-date,
+  &__place-or-date {
+    padding: 0.5em 2px;
+  }
+
+  &__number,
+  &__email,
+  &__site,
+  &__about-me-text,
+  &__company-and-date,
+  &__company,
+  &__date,
+  &__faculty,
+  &__job-description,
+  &__place-of-study,
+  &__study-dates,
+  &__all-learned {
+    font-weight: 400;
+  }
+
+  &__about-me {
+    padding-top: 14px;
+    padding-bottom: 28px;
+  }
+
+  &__article-title {
+    font-size: 17.5px;
+    margin-bottom: 3.5px;
+  }
+
+  &__about-me-text {
+    line-height: 1.65;
+  }
+
+  &__experience {
+    margin-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  blockquote {
+    border-left: 4px solid #67bdfc;
+    padding: 0.2em 0.75em;
+    line-height: 1.5;
+    font-style: italic;
+    margin: 20px 0;
+
+    * {
+      font-size: 16.8px;
+    }
+  }
+
+  &__company-and-date,
+  &__place-or-date {
+    display: flex;
+  }
+  
+  &__date,
+  &__study-dates,
+  &__job-duties-item {
+    color: hsla(195,2%,60%,.95);
+    list-style-type: disc;
+  }
+  
+  &__job-duties {
+    padding-inline-start: 1.7em;
+  }
+
+  &__job-title, 
+  &__job-description {
+    display: inline;
+  }
+
+  &__date,
+  &__study-dates {
+    &::before {
+      content: " • ";
+      display: inline-block;
+      width: 10px;
+      margin-left: 4px;
+      font-size: 16px;
+    }
+  }
+
+  &__job-duties-item {
+    padding: 6px 0;
+  }
+
+  &__education {
+    margin-top: 28px;
+    padding-bottom: 28px;
+  } 
+
+  &__skills {
+    margin-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  &__skill-title,
+  &__all-learned {
+    display: inline;
+  }
+
+  &__skills-list {
+    padding-inline-start: 1.7em;
+  }
+
+  &__working-languages,
+  &__frameworks,
+  &__cloud-devops,
+  &__tools {
+    list-style-type: disc;
+    padding: 6px 0;
+    line-height: 1.65;
+  }
+}

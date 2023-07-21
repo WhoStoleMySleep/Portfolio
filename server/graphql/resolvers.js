@@ -32,9 +32,9 @@ module.exports = {
       return res
     },
     removeBlog: async (_, { id }) => {
-      const res = Blog.find({ _id: id })
+      const res = Blog.find({ id: id })
 
-      await Blog.deleteOne({ _id: id })
+      await Blog.deleteOne({ id: id })
 
       return `Removed ${id}`
     }
@@ -43,5 +43,8 @@ module.exports = {
     blogs: async () => {
       return Blog.find({});
     },
+    blog: async (_, { id }) => {
+      return Blog.findOne({ id: id });
+    }
   },
 };

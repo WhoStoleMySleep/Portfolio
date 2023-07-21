@@ -25,11 +25,12 @@ module.exports = gql`
 
   type Query {
     blogs: [Blog!]
+    blog(id: String!): Blog
   }
 
   type Mutation {
     createBlog(id: String!, headImageLink: String!, name: String!, tags: String!, conciseContent: String!, date: String!, author: String!, text: [String!]!): Blog!
-    updateBlog(id: ID!, text: String!): [Blog!]
-    removeBlog(id: ID!): String!
+    updateBlog(id: String!, headImageLink: String, name: String, tags: String, conciseContent: String, date: String, author: String, text: [String]): [Blog!]
+    removeBlog(id: String!): String!
   }
 `;

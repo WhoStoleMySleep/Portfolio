@@ -1,0 +1,20 @@
+.blog {
+	max-width: 900px;
+	min-height: 100vh;
+	margin: 0 auto;
+
+	&__title {
+		height: 42px;
+		padding: 4px 2px;
+		border-bottom: 1px solid #fff;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.blog {
+		&__title {
+			padding-left: calc(min(16px, 8vw));
+			padding-right: calc(min(16px, 8vw));
+		}
+	}
+}

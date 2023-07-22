@@ -1,4 +1,3 @@
-import React from 'react';
 import bgContact from '../../assets/image/bgContact.webp'
 import styles from './contact.module.scss';
 import { Link } from 'react-router-dom';

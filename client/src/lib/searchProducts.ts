@@ -2,7 +2,6 @@ function searchProducts(text: string, query: string, tag: string): boolean {
   const lowerText = text.toLowerCase();
   const lowerQuery = query.toLowerCase();
   const lowerTag = tag.toLowerCase();
-
   const result = [true, true];
 
   if (lowerQuery[0] !== '@') {

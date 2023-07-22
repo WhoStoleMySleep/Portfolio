@@ -1,11 +1,10 @@
-
 import styles from './BlogCard.module.scss';
 import generateHexColorCode from '../../lib/generateHexColorCode';
 import { Link } from 'react-router-dom';
 
 function BlogCard(prop: {
   id: string,
-  headImage: any,
+  headImage: string,
   altImage: string,
   themeName: string,
   conciseContent: string,
@@ -21,11 +20,11 @@ function BlogCard(prop: {
     datePublish,
     tags,
   } = prop
-
   const tagsArr = tags.trim().split(',')
 
   return (
     <Link to={`${id}`} className={styles["blog-card"]}>
+      <span className={styles["blog-card__head-image"]} style={{backgroundImage: `url(${headImage})`}}></span>
       <img src={headImage} alt={altImage} className={styles["blog-card__head-image"]} loading='lazy' />
       <div className={styles["blog-card__text-wrapper"]}>
         <h2 className={styles["blog-card__theme-name"]}>{themeName}</h2>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Face from '../../assets/image/face.webp'
 import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';

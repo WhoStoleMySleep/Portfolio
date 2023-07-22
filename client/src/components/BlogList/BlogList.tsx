@@ -1,12 +1,10 @@
-
 import BlogCard from '../BlogCard/BlogCard';
 import searchProducts from '../../lib/searchProducts';
-import one from '../../assets/image/one.webp'
 import styles from './BlogList.module.scss';
 import { useState } from 'react';
 import useDebounce from '../../lib/hooks/useDebounce';
 
-function BlogList({allBlogs}: {allBlogs: any}) {
+function BlogList({allBlogs}: {allBlogs: {id: string, conciseContent: string, date: string, name: string, headImageLink: string, tags: string}[]}) {
   const [ query, setQuery ] = useState('') 
   const debouncedSearchTerm = useDebounce(query, 300)
 
@@ -25,7 +23,8 @@ function BlogList({allBlogs}: {allBlogs: any}) {
             conciseContent: string, 
             date: string, 
             name: string, 
-            tags: string
+            tags: string,
+            headImageLink: string
           }, 
           i: number
         ) => searchProducts(x.name, debouncedSearchTerm, x.tags) ? (

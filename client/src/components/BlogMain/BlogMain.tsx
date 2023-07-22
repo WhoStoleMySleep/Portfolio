@@ -6,9 +6,7 @@ import { ALL_BLOGS } from '../../GraphQl.queries';
 const BlogList = lazy(() => import('../BlogList/BlogList'));
 
 function BlogMain() {
-  const allBlogs = ' ';
-  let query = ''
-  let data = useQuery(ALL_BLOGS).data;
+  let { data } = useQuery(ALL_BLOGS);
 
   return (
     <div className={styles.blog}>

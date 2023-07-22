@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-function useDebounce(text: string, delay: number) {
+function useDebounce(text: string, delay: number): string {
   const [delayedText, setDelayedText] = useState(text);
 
   useEffect(() => {

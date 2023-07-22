@@ -34,7 +34,7 @@ function BlogList({allBlogs}: {allBlogs: {id: string, conciseContent: string, da
               altImage="img" 
               conciseContent={x.conciseContent}
               datePublish={x.date} 
-              headImage={one} 
+              headImage={x.headImageLink} 
               tags={x.tags}
               themeName={x.name}
             />

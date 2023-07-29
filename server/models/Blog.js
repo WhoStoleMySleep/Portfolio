@@ -8,7 +8,8 @@ const blogSchema = new Schema({
   conciseContent: String,
   date: String,
   author: String,
-  text: [String]
+  text: [String],
+  textRu: [String]
 });
 
 module.exports = model('Blog', blogSchema);

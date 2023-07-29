@@ -10,6 +10,7 @@ module.exports = gql`
     date: String!
     author: String!
     text: [String!]!
+    textRu: [String!]!
   }
 
   input BlogInput {
@@ -21,6 +22,7 @@ module.exports = gql`
     date: String!
     author: String!
     text: [String!]!
+    textRu: [String!]!
   }
 
   type Query {
@@ -29,8 +31,7 @@ module.exports = gql`
   }
 
   type Mutation {
-    createBlog(id: String!, headImageLink: String!, name: String!, tags: String!, conciseContent: String!, date: String!, author: String!, text: [String!]!): Blog!
-    updateBlog(id: String!, headImageLink: String, name: String, tags: String, conciseContent: String, date: String, author: String, text: [String]): [Blog!]
+    createBlog(id: String!, headImageLink: String!, name: String!, tags: String!, conciseContent: String!, date: String!, author: String!, text: [String!]!, textRu: [String!]!): Blog!
     removeBlog(id: String!): String!
   }
 `;

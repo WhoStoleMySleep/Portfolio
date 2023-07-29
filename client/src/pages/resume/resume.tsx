@@ -4,7 +4,6 @@ import styles from './resume.module.scss'
 import { Link } from 'react-router-dom';
 import { EducationData, ExperienceData } from './resumedata';
 import EducationBlockquote from '../../components/EducationBlockquote/EducationBlockquote';
-import file from '../../assets/Науменко Константин Николаевич - Full stak developer - cv.doc'
 
 function Resume() {  
   return (

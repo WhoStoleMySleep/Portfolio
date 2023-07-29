@@ -1,0 +1,25 @@
+.education-blockquote {
+  &__faculty,
+  &__place-of-study,
+  &__study-dates {
+    font-weight: 400;
+  }
+
+  &__place-or-date {
+    display: flex;
+    padding: 0.5em 2px;
+  }
+
+  &__study-dates {
+    color: hsla(195,2%,60%,.95);
+    list-style-type: disc;
+
+    &::before {
+      content: " • ";
+      display: inline-block;
+      width: 10px;
+      margin-left: 4px;
+      font-size: 16px;
+    }
+  }
+}

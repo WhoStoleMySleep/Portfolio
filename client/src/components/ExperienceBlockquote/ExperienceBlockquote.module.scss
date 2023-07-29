@@ -1,0 +1,55 @@
+.experience-blockquote {
+  border-left: 4px solid #67bdfc;
+  padding: 0.2em 0.75em;
+  line-height: 1.5;
+  font-style: italic;
+  margin: 20px 0;
+
+  * {
+    font-size: 16.8px;
+  }
+  
+  &__company-and-date,
+  &__company,
+  &__date,
+  &__job-description {
+    font-weight: 400;
+  }
+
+  &__company-and-date {
+    padding: 0.5em 2px;
+  }
+
+  &__company-and-date {
+    display: flex;
+  }
+  
+  &__date,
+  &__job-duties-item {
+    color: hsla(195,2%,60%,.95);
+    list-style-type: disc;
+  }
+  
+  &__date {
+    &::before {
+      content: " • ";
+      display: inline-block;
+      width: 10px;
+      margin-left: 4px;
+      font-size: 16px;
+    }
+  }
+
+  &__job-title, 
+  &__job-description {
+    display: inline;
+  }
+
+  &__job-duties-item {
+    padding: 6px 0;
+  }
+
+  &__job-duties {
+    padding-inline-start: 1.7em;
+  }
+}

@@ -1,15 +1,19 @@
 import clip from '../../assets/image/clip.svg';
+import ExperienceBlockquote from '../../components/ExperienceBlockquote/ExperienceBlockquote';
 import styles from './resume.module.scss'
 import { Link } from 'react-router-dom';
+import { EducationData, ExperienceData } from './resumedata';
+import EducationBlockquote from '../../components/EducationBlockquote/EducationBlockquote';
+import file from '../../assets/Науменко Константин Николаевич - Full stak developer - cv.doc'
 
-function Resume() {
+function Resume() {  
   return (
     <main className={styles.resume}>
       <h1 className={styles["resume__title"]}>WhoStoleMySleep's Resume</h1>
       <Link 
-        to='../../assets/Науменко Константин Николаевич - Full stak developer - cv.doc' 
-        download={''} 
-        target="_blank"
+        to={'/resume'}
+        // download={''} 
+        // target="_blank"
         className={styles['resume__file-link']}
       >
         <img src={clip} alt={''} className={styles["resume__icon"]} />
@@ -22,8 +26,8 @@ function Resume() {
         <Link className={styles["resume__email"]} to={'mailto:thekostia5@gmail.com'}>
           thekostia5@gmail.com
         </Link>
-        <Link className={styles["resume__site"]} to={'https://whostolemysleep.com'} target="_blank">
-          whostolemysleep.com
+        <Link className={styles["resume__site"]} to={'https://whostolemysleep.vercel.app/'} target="_blank">
+          whostolemysleep.vercel.app
         </Link>
       </article>
       <article className={styles["resume__about-me"]}>
@@ -31,78 +35,33 @@ function Resume() {
           About Me
         </h4>
         <p className={styles["resume__about-me-text"]}>
-          As a Backend Engineer at Yahoo on the Fantasy Sports team, I am highly experienced in the software engineering field, having implemented microservices, libraries, and distributed multi-tenant architectures. I'm also an open-source enthusiast, and I have created and worked on several projects that have been listed in GitHub's trending section
+          I am a fullstack developer with over 3 years of experience in this field. My professional experience includes building custom websites as well as managing a team of developers. I am used to working with different technologies and programming languages such as HTML (JSX/TSX), CSS (SCSS), JavaScript (Typescript), React, Node.js, Figma and others. My goal is to create quality and user-friendly websites for clients to meet their needs and requirements. I am always up for new challenges and strive to continuously improve my skills and knowledge in web development.
         </p>
         <p className={styles["resume__about-me-text"]}>
-          My educational background is in Computer Science, with a Master's degree from UT Dallas and a Bachelor's from IIT Guwahati. I have a passion for programming, and I'm constantly looking for ways to keep my skills up to date and learn new technologies. My current goal is to develop my expertise in cloud computing and distributed systems, and I'm actively researching the latest trends in this field. Furthermore, I am a huge proponent of open-source technologies and constantly looking for ways to contribute to the community.
+          I am passionate about programming and am constantly looking for ways to keep my skills up to date and learn new technologies. Currently, my goal is to develop my knowledge of Fullstak development and I am actively researching the latest trends in the field. I am also a big supporter of open source technologies and am constantly looking for ways to contribute to the community.
         </p>
       </article>
       <article className={styles["resume__experience"]}>
         <h4 className={styles["resume__article-title"]}>
           Experience
         </h4>
-        <blockquote className={styles['resume__experience-element']}>
-          <p className={styles["resume__current-position"]}>
-            Member of Technical Staff
-          </p>
-          <span className={styles["resume__company-and-date"]}>
-            <p className={styles["resume__company"]}>
-              VMware
-            </p>
-            <time className={styles["resume__date"]} dateTime='June 2021 - Sept 2022'> 
-              June 2021 - Sept 2022
-            </time>
-          </span>
-          <ul className={styles["resume__job-duties"]}>
-            <li className={styles["resume__job-duties-item"]}>
-              <p className={styles["resume__job-title"]}>Automation Platform development: </p>
-              <p className={styles["resume__job-description"]}>
-                End-to-end implementation of multiple microservices using test-driven development. These services are a part of VMware’s remediation and diagnostic automation platform used by SREs of different products to automate their operations. 
-              </p>
+        <ul className="resume__blockquote-list">
+          {ExperienceData.map((item, index) => (
+            <li key={index} className='resume__blockquote-list-element'>
+              <ExperienceBlockquote ExperienceData={item} />
             </li>
-            <li className={styles["resume__job-duties-item"]}>
-              <p className={styles["resume__job-title"]}>Automation Platform development: </p>
-              <p className={styles["resume__job-description"]}>
-                End-to-end implementation of multiple microservices using test-driven development. These services are a part of VMware’s remediation and diagnostic automation platform used by SREs of different products to automate their operations. 
-              </p>
-            </li>
-            <li className={styles["resume__job-duties-item"]}>
-              <p className={styles["resume__job-title"]}>Automation Platform development: </p>
-              <p className={styles["resume__job-description"]}>
-                End-to-end implementation of multiple microservices using test-driven development. These services are a part of VMware’s remediation and diagnostic automation platform used by SREs of different products to automate their operations. 
-              </p>
-            </li>
-          </ul>
-        </blockquote>
+          ))}
+        </ul>
       </article>
       <article className={styles["resume__education"]}>
         <h4 className={styles["resume__article-title"]}>Education</h4>
-        <blockquote className={styles["resume__education-element"]}>
-          <p className={styles["resume__faculty"]}>
-            Master of Science in Computer Science
-          </p>
-          <span className={styles["resume__place-or-date"]}>
-            <p className={styles["resume__place-of-study"]}>
-              The University of Texas at Dallas
-            </p>
-            <time className={styles["resume__study-dates"]} dateTime='2019 - 2021'>
-              2019 - 2021
-            </time>
-          </span>
-        </blockquote>
-        <blockquote className={styles["resume__education-element"]}>
-          <p className={styles["resume__faculty"]}>
-            Master of Science in Computer Science
-          </p>
-          <span className={styles["resume__place-or-date"]}>
-            <p className={styles["resume__place-of-study"]}>
-              The University of Texas at Dallas
-            </p>
-            <time className={styles["resume__study-dates"]} dateTime='2019 - 2021'>
-              2019 - 2021
-            </time>
-          </span>
-        </blockquote>
+        <ul className="resume__blockquote-list">
+          {EducationData.map((item, index) => (
+            <li key={index} className='resume__blockquote-list-element'>
+              <EducationBlockquote EducationData={item} />
+            </li>
+          ))}
+        </ul>
       </article>
       <article className={styles["resume__skills"]}>
         <h4 className={styles["resume__article-title"]}>Skills</h4>
@@ -110,25 +69,19 @@ function Resume() {
           <li className={styles["resume__working-languages"]}>
             <p className={styles["resume__skill-title"]}>Languages: </p>
             <span className={styles["resume__all-learned"]}>
-              Java (5 years), Python (3 years), Bash
+              JavaScript (2.75 years), Typescript (2.5 year), HTML (JSX/TSX), CSS (SCSS)
             </span>
           </li>
           <li className={styles["resume__frameworks"]}>
             <p className={styles["resume__skill-title"]}>Frameworks: </p>
             <span className={styles["resume__all-learned"]}>
-              Spring Framework, JUnit, Mockito, Flask
-            </span>
-          </li>
-          <li className={styles["resume__cloud-devops"]}>
-            <p className={styles["resume__skill-title"]}>Cloud & DevOps: </p>
-            <span className={styles["resume__all-learned"]}>
-              AWS, Kubernetes, Docker, Microservices, nginx, helm
+              React, Next.js, Angular, Node.js, Express
             </span>
           </li>
           <li className={styles["resume__tools"]}>
             <p className={styles["resume__skill-title"]}>Tools: </p>
             <span className={styles["resume__all-learned"]}>
-              Git, Jenkins CI, MySQL, REST API, Jira, Gradle, Maven, Wavefront
+              Git, MySQL, REST API, Graphql, Jira, Webpack, Jest, Redux, Mobx, Figma
             </span>
           </li>
         </ul>

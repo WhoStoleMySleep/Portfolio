@@ -6,7 +6,7 @@
 	display: block;
 
 	&:hover {
-    background: #474c50;
+    background: var(--bgc);
 	}
 
 	&__head-image {

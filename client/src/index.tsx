@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './variables.scss';
 import './index.scss';
 import './assets/font/font.scss'
 import reportWebVitals from './reportWebVitals';

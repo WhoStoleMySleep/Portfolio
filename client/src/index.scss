@@ -54,3 +54,22 @@ h3 {
 footer {
   margin-top: auto;
 }
+
+.light {
+  background-color: #fff;
+  --bgc: hsla(44,6%,50%,.15);
+
+  p,
+  a,
+  div,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    border-color: #000;
+  }
+}

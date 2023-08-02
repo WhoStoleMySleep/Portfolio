@@ -55,13 +55,18 @@
     }
   }
 
-  &__lightmode {
+  &__lightmode,
+  &__language-link {
     font-family: FontAwesome;
+  }
+
+  &__lightmode {
     font-weight: bold;
   }
 
   &__contact-link,
-  &__lightmode {
+  &__lightmode,
+  &__language-link {
     display: block;
     padding: 12px;
   }

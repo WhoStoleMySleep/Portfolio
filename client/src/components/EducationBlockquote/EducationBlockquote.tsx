@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import styles from './EducationBlockquote.module.scss';
 
 function EducationBlockquote({EducationData}: {
@@ -8,15 +9,16 @@ function EducationBlockquote({EducationData}: {
   }
 }) {
   const { faculty, place, dates } = EducationData
+  const { t } = useTranslation()
   
   return (
     <blockquote className={styles["education-blockquote"]}>
       <p className={styles["education-blockquote__faculty"]}>
-        {faculty}
+        {t(faculty)}
       </p>
       <span className={styles["education-blockquote__place-or-date"]}>
         <p className={styles["education-blockquote__place-of-study"]}>
-          {place}
+          {t(place)}
         </p>
         <time className={styles["education-blockquote__study-dates"]} dateTime={dates}>
           {dates}

@@ -2,7 +2,7 @@ const Blog = require('../models/Blog');
 
 module.exports = {
   Mutation: {
-    async createBlog(_, { id, headImageLink, name, tags, conciseContent, date, author, text, textRu }) {
+    async createBlog(_, { id, headImageLink, name, tags, conciseContent, date, author, text }) {
       const newBlog = new Blog({
         id: id,
         headImageLink: headImageLink,
@@ -12,7 +12,6 @@ module.exports = {
         date: date,
         author: author,
         text: text,
-        textRu: textRu
       });
 
       const res = await newBlog.save();

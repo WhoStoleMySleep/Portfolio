@@ -16,12 +16,13 @@ const ALL_BLOGS = gql`
 `
 
 const FIND_BLOG = gql`
-  query Blog($id: String!) {
+  query Query($id: String!) {
     blog(id: $id) {
       id
       headImageLink
       name
       tags
+      conciseContent
       date
       author
       text

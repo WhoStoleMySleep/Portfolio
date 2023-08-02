@@ -3,8 +3,11 @@ import searchProducts from '../../lib/searchProducts';
 import styles from './BlogList.module.scss';
 import { useState } from 'react';
 import useDebounce from '../../lib/hooks/useDebounce';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
-function BlogList({allBlogs}: {allBlogs: {id: string, conciseContent: string, date: string, name: string, headImageLink: string, tags: string}[]}) {
+function BlogList({allBlogs}: {allBlogs: {id: string, conciseContent: string[], date: string, name: string[], headImageLink: string, tags: string}[]}) {
+  const { t } = useTranslation()
   const [ query, setQuery ] = useState('') 
   const debouncedSearchTerm = useDebounce(query, 300)
 
@@ -14,20 +17,20 @@ function BlogList({allBlogs}: {allBlogs: {id: string, conciseContent: string, da
         type="text" 
         className={styles["blog-list__search-input"]} 
         onChange={(event) => setQuery(event.target.value)} 
-        placeholder='Search by text or @tag'
+        placeholder={t("Search by text or @tag")}
       />
       <ul className={styles["blog-list__blogs"]}>
         {allBlogs.map((
           x: {
             id: string, 
-            conciseContent: string, 
+            conciseContent: string[], 
             date: string, 
-            name: string, 
+            name: string[], 
             tags: string,
             headImageLink: string
           }, 
           i: number
-        ) => searchProducts(x.name, debouncedSearchTerm, x.tags) ? (
+        ) => searchProducts(t(x.name), debouncedSearchTerm, x.tags) ? (
           <li key={i}>
             <BlogCard 
               id={x.id}

@@ -3,13 +3,12 @@ const { model, Schema } = require('mongoose');
 const blogSchema = new Schema({
   id: String,
   headImageLink: String,
-  name: String,
+  name: [String],
   tags: String,
-  conciseContent: String,
+  conciseContent: [String],
   date: String,
   author: String,
-  text: [String],
-  textRu: [String]
+  text: [[String]],
 });
 
 module.exports = model('Blog', blogSchema);

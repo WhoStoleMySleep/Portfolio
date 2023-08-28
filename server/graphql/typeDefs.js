@@ -32,12 +32,28 @@ module.exports = gql`
 
   type OurCakes {
     id: String!
-    order: [[String!]!]!
+    cakes: [[String!]!]!
+    price: String!
+    name: String!
+    email: String!
+    number: String!
+    sity: String!
+    street: String!
+    house: String!
+    apartment: String!
+    comment: String!
+    date: String!
+    timeInterval: String!
+    paymentMethod: String!
   }
 
   type CustomCakes {
-    id: String
-    customCakes: [[String!]!]!
+    id: String!
+    image: String!
+    description: String!
+    name: String!
+    email: String!
+    number: String!
   }
 
   type Query {
@@ -57,9 +73,9 @@ module.exports = gql`
     removeCake(id: String!): String!
     createCakesNumber(id: String!, number: String!): CakesNumber!
     removeCakesNumber(id: String!): String!
-    createOurCakes(id: String!, order: [[String!]!]!): OurCakes!
+    createOurCakes(id: String!, cakes: [[String!]!]!, price: String!, name: String!, email: String!, number: String!, sity: String!, street: String!, house: String!, apartment: String!, comment: String!, date: String!, timeInterval: String!, paymentMethod: String!): OurCakes!
     removeOurCakes(id: String!): String!
-    createCustomCakes(id: String!, customCakes: [[String!]!]!): CustomCakes!
+    createCustomCakes(id: String!, image: String!, description: String!, name: String!, email: String!, number: String!): CustomCakes!
     removeCustomCakes(id: String!): String!
   }
 `;

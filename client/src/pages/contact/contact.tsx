@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import bgContact from '../../assets/image/bgContact.webp'
 import styles from './contact.module.scss';
 import { Link } from 'react-router-dom';
+import useScrollToTop from '../../lib/hooks/useScrollToTop';
 
 function Contact() {
   const { t } = useTranslation()

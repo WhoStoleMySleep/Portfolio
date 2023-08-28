@@ -57,7 +57,7 @@ module.exports = {
     },
   
     removeCake: async (_, { id }) => {
-      // const res = Cakes.find({ id: id })
+      const res = Cakes.find({ id: id })
   
       await Cakes.deleteOne({ id: id })
   
@@ -79,15 +79,29 @@ module.exports = {
     },
 
     removeCakesNumber: async (_, { id }) => {
+      const res = CakesNumber.find({ id: id })
+      
       await CakesNumber.deleteOne({ id: id });
 
       return `Removed ${id}`
     },
 
-    createOurCakes: async (_, { id, order }) => {
+    createOurCakes: async (_, { id, cakes, price, name, email, number, sity, street, house, apartment, comment, date, timeInterval, paymentMethod }) => {
       const newOurCakes = new OurCakes({
         id: id,
-        order: order
+        cakes: cakes,
+        price: price,
+        name: name,
+        email: email,
+        number: number,
+        sity: sity,
+        street: street,
+        house: house,
+        apartment: apartment,
+        comment: comment,
+        date: date,
+        timeInterval: timeInterval,
+        paymentMethod: paymentMethod
       });
 
       const res = await newOurCakes.save();
@@ -99,13 +113,21 @@ module.exports = {
     },
 
     removeOurCakes: async (_, { id }) => {
+      const res = OurCakes.find({ id: id })
+      
       await OurCakes.deleteOne({ id: id });
+
+      return `Removed ${id}`
     },
 
-    createCustomCakes: async (_, { id, customCakes }) => {
+    createCustomCakes: async (_, { id, image, description, name, email, number }) => {
       const newCustomCakes = new CustomCakes({
         id: id,
-        customCakes: customCakes
+        image: image,
+        description: description,
+        name: name,
+        email: email,
+        number: number,
       });
 
       const res = await newCustomCakes.save();
@@ -117,10 +139,12 @@ module.exports = {
     },
 
     removeCustomCakes: async (_, { id }) => {
+      const res = CustomCakes.find({ id: id })
+      
       await CustomCakes.deleteOne({ id: id });
 
       return `Removed ${id}`
-    }
+    },
   },
 
   Query: {

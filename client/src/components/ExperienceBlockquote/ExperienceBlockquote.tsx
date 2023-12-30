@@ -11,6 +11,8 @@ function ExperienceBlockquote({ExperienceData}: {
 }) {
   const { currentPosition, company, date, jobDuties } = ExperienceData
   const { t } = useTranslation()
+
+  const dates = date.split(' ')
     
   return (
     <blockquote className={styles['experience-blockquote']}>
@@ -22,7 +24,7 @@ function ExperienceBlockquote({ExperienceData}: {
           {t(company)}
         </p>
         <time className={styles["experience-blockquote__date"]} dateTime={t(date)}> 
-          {t(date)}
+          {dates.map((item) => ' ' + t(item))}
         </time>
       </span>
       <ul className={styles["experience-blockquote__job-duties"]}>

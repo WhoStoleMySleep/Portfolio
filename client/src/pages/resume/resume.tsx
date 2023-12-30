@@ -28,8 +28,8 @@ function Resume() {
         <Link className={styles["resume__email"]} to={'mailto:thekostia5@gmail.com'}>
           thekostia5@gmail.com
         </Link>
-        <Link className={styles["resume__site"]} to={'https://whostolemysleep.vercel.app/'} target="_blank">
-          whostolemysleep.vercel.app
+        <Link className={styles["resume__site"]} to={'https://whostolemysleep.ru/'} target="_blank">
+          whostolemysleep.ru
         </Link>
       </article>
       <article className={styles["resume__about-me"]}>

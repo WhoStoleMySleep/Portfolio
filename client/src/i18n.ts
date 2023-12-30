@@ -9,12 +9,14 @@ export const resources  = {
   }
 }
 
+const lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage).substr(0, 2).toLowerCase();
+
 i18n
   .use(backend)
   .use(initReactI18next)
   .init({
     resources,
-    lng: "en",
+    lng: lang === 'ru' ? 'ru' : 'en',
     fallbackLng: "en",
     interpolation: {
       escapeValue: false

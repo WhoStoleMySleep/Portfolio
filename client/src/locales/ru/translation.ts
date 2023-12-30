@@ -33,6 +33,7 @@ const translation = {
   "Dec" : "Дек",
   "Creating website designs" : "Создание дизайна веб-сайтов",
   "Website creation and support" : "Создание и поддержка веб-сайтов",
+  "Configuring the server side of sites" : "Настройка серверной стороны сайтов",
   "Adaptation of the assortment of the store to the date base of the site" : "Адаптация ассортимента магазина к датируемой базе сайта",
   "Creating an internet ordering system" : "Создание системы интернет-заказов",
   "SEO optimization of sites" : "SEO-оптимизация сайтов",

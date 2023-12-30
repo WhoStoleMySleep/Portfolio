@@ -55,7 +55,7 @@ export const EducationData = [
   },
   {
     faculty: "Basic general education",
-    place: "Maltsevskaya General Education School",
+    place: "Maltsevskaya Basic Secondary School",
     dates: "2012 - 2021"
   },
 ]

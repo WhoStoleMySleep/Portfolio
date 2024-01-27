@@ -37,7 +37,7 @@ function Resume() {
           {t("About Me")}
         </h4>
         <p className={styles["resume__about-me-text"]}>
-          {t("I am a fullstack developer with over 3 years of experience in this field. My professional experience includes building custom websites as well as managing a team of developers. I am used to working with different technologies and programming languages such as HTML (JSX/TSX), CSS (SCSS), JavaScript (Typescript), React, Node.js, Figma and others. My goal is to create quality and user-friendly websites for clients to meet their needs and requirements. I am always up for new challenges and strive to continuously improve my skills and knowledge in web development.")}
+          {t("I am a fullstack developer with over 4 years of experience in this field. My professional experience includes building custom websites as well as managing a team of developers. I am used to working with different technologies and programming languages such as HTML (JSX/TSX), CSS (SCSS), JavaScript (Typescript), React, Angular, Node.js, Figma and others. My goal is to create quality and user-friendly websites for clients to meet their needs and requirements. I am always up for new challenges and strive to continuously improve my skills and knowledge in web development.")}
         </p>
         <p className={styles["resume__about-me-text"]}>
           {t("I am passionate about programming and am constantly looking for ways to keep my skills up to date and learn new technologies. Currently, my goal is to develop my knowledge of Fullstak development and I am actively researching the latest trends in the field. I am also a big supporter of open source technologies and am constantly looking for ways to contribute to the community.")}

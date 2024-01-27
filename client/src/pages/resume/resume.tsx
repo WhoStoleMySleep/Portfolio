@@ -71,13 +71,13 @@ function Resume() {
           <li className={styles["resume__working-languages"]}>
             <p className={styles["resume__skill-title"]}>{t("Languages: ")}</p>
             <span className={styles["resume__all-learned"]}>
-              {t("JavaScript (2.75 years), Typescript (2.5 year), HTML (JSX/TSX), CSS (SCSS), PHP")}
+              JavaScript, Typescript, HTML (JSX/TSX), CSS (SCSS), PHP
             </span>
           </li>
           <li className={styles["resume__frameworks"]}>
             <p className={styles["resume__skill-title"]}>{t("Frameworks: ")}</p>
             <span className={styles["resume__all-learned"]}>
-              React, Next.js, Node.js, Express, Laravel
+              React, Next.js, Angular, Node.js, Express, Laravel
             </span>
           </li>
           <li className={styles["resume__cms"]}>

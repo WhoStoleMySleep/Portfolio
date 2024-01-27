@@ -15,7 +15,6 @@ const translation = {
   "Education" : "Образование",
   "Skills" : "Навыки",
   "Languages: " : "Языки: ",
-  "JavaScript (2.75 years), Typescript (2.5 year), HTML (JSX/TSX), CSS (SCSS)" : "JavaScript (2.75 года), Typescript (2.5 года), HTML (JSX/TSX), CSS (SCSS)",
   "Frameworks: " : "Фреймворки: ",
   "Tools: " : "Инструменты: ",
   "Fullstack developer" : "Fullstack разработчик",

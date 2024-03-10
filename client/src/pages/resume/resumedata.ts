@@ -1,42 +1,22 @@
-const data = new Date();
-let month: number | string = data.getMonth()
-let year: number | string = data.getFullYear()
-
-switch (month)
-{
-  case 0: month="Jan"; break;
-  case 1: month="Feb"; break;
-  case 2: month="Mar"; break;
-  case 3: month="Apr"; break;
-  case 4: month="May"; break;
-  case 5: month="June"; break;
-  case 6: month="July"; break;
-  case 7: month="Aug"; break;
-  case 8: month="Sept"; break;
-  case 9: month="Oct"; break;
-  case 10: month="Nov"; break;
-  case 11: month="Dec"; break;
-}
-
 export const ExperienceData = [
   {
     currentPosition: "Fullstack developer",
     company: "Интернет-группа «ЮГС»",
-    date: `Nov 2023 - ${month} ${year}`,
+    date: `Nov 2023 - currently`,
     jobDuties: [
       {
         jobTitle: "Website creation and support",
-        jobDescription: ""
+        jobDescription: "",
       },
       {
         jobTitle: "SEO optimization of sites",
-        jobDescription: ""
+        jobDescription: "",
       },
       {
         jobTitle: "Configuring the server side of sites",
-        jobDescription: ""
+        jobDescription: "",
       },
-    ]
+    ],
   },
   {
     currentPosition: "Fullstack developer",
@@ -45,25 +25,26 @@ export const ExperienceData = [
     jobDuties: [
       {
         jobTitle: "Creating website designs",
-        jobDescription: ""
+        jobDescription: "",
       },
       {
         jobTitle: "Website creation and support",
-        jobDescription: ""
+        jobDescription: "",
       },
       {
-        jobTitle: "Adaptation of the assortment of the store to the date base of the site",
-        jobDescription: ""
+        jobTitle:
+          "Adaptation of the assortment of the store to the date base of the site",
+        jobDescription: "",
       },
       {
         jobTitle: "Creating an internet ordering system",
-        jobDescription: ""
+        jobDescription: "",
       },
       {
         jobTitle: "SEO optimization of sites",
-        jobDescription: ""
+        jobDescription: "",
       },
-    ]
+    ],
   },
   {
     currentPosition: "Fullstack developer",
@@ -72,29 +53,30 @@ export const ExperienceData = [
     jobDuties: [
       {
         jobTitle: "Development of static and dynamic sites",
-        jobDescription: ""
+        jobDescription: "",
       },
       {
         jobTitle: "Design, development, testing and support of websites",
-        jobDescription: ""
+        jobDescription: "",
       },
       {
         jobTitle: "Reverse engineering, code refinement",
-        jobDescription: ""
+        jobDescription: "",
       },
-    ]
+    ],
   },
-]
+];
 
 export const EducationData = [
   {
     faculty: "Information systems and programming",
-    place: "Yurginsky College of Mechanical Engineering and Information Technologies",
-    dates: "2022 - 2026"
+    place:
+      "Yurginsky College of Mechanical Engineering and Information Technologies",
+    dates: "2022 - 2026",
   },
   {
     faculty: "Basic general education",
     place: "Maltsevskaya Basic Secondary School",
-    dates: "2012 - 2021"
+    dates: "2012 - 2021",
   },
-]
+];
